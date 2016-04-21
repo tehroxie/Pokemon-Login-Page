@@ -1,0 +1,93 @@
+.wrapper
+  background: url('../img/bg.png') no-repeat top center
+  background-size: cover
+  position: absolute
+  width: 100%
+  height: 100%
+  font-weight: 100
+
+  .placeholder
+    background-color: rgba(43, 6, 71, 0.4)
+    max-width: 350px
+    position: absolute
+    top: 45%
+    left: 50%
+    transform: translate(-50%, -45%)
+    @media screen and (max-width: 500px)
+      max-width: 300px
+
+    .content
+      margin: 0 auto
+
+      #logo
+        display: block
+        max-width: 250px
+        margin: 0px auto
+        padding: 50px
+        @media screen and (max-width: 500px)
+          padding: 15% 5%
+
+      #form
+        .input-group
+          margin: 0px auto
+          text-align: center
+          position: relative
+
+          &:nth-child(2)
+            margin-top: 25px
+
+          .pk-label
+            +size(25px)
+            position: absolute
+            transform: translate(50%, 50%)
+          label
+            +position(absolute, 50% null null 20%)
+            +transform(translateY(-50%))
+            font:
+              style: italic
+              size: 18px
+            pointer-events: none
+            +transition
+
+          input:focus + label,
+          input.has-value + label
+            top: -10px
+            font-size: 12px
+
+          .input-field
+            height: 45px
+            width: 75%
+            background: none
+            border: none
+            padding-left: 50px
+            border-bottom: solid 1px #eee
+
+          .input-button
+            border: none
+            margin: 50px auto
+            border: 3px solid #3c59a3
+            border-radius: 10em
+            color: #3c59a3
+            font-weight: 600
+            padding: 10px 85px
+            background-color: #fecb18
+            box-shadow: inset 0px 0px 3px 3px rgba(33, 57, 116, 0.3)
+
+            &:active
+              background-color: #3c59a3
+              border: 3px solid #fecb18
+              color: #fecb18
+              box-shadow: inset 0px 0px 3px 3px rgba(#fecb18, 0.3)
+
+      .sign-up
+        text-align: center
+        font-size: 15px
+
+        a
+          font-weight: 600
+          color: white
+          margin-left: 10px
+
+
+          &:hover
+            text-decoration: underline
